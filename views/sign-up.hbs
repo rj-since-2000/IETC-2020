@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Warnise signup</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800|Roboto:400,500,700" rel="stylesheet">
+    <!-- Theme CSS -->
+    <link type="text/css" href=" /css/theme.css" rel="stylesheet">
+    <!-- Demo CSS - No need to use these in your project -->
+    <link type="text/css" href=" /css/demo.css" rel="stylesheet">
+    <link href="/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <main class="main">
+        <section class="spotlight parallax bg-cover bg-size--cover" data-spotlight="fullscreen"
+            style="background-image: url('/images/backgrounds/sign-in-background.jpg')">
+            <span class="mask bg-primary alpha-3"></span>
+            <div class="spotlight-holder py-lg pt-lg-xl">
+                <div class="container d-flex align-items-center no-padding">
+                    <div class="col">
+                        <div
+                            class="row cols-xs-space align-items-center text-center text-md-left justify-content-center">
+                            <div class="col-lg-7 text-secondary heading h1 align-items-start"
+                                style="font-size: 4.5rem; text-align: center;">
+                                Warnise Store
+                            </div>
+                            <div class=" col-lg-5">
+                                <div class="card bg-primary text-white">
+                                    <div class="card-body">
+                                        <span class="clearfix"></span>
+                                        <h4 class="heading h3 text-white pt-3 pb-5">Greetings from Warnise store!<br>
+                                            let's create your account</h4>
+                                        <form class="form-primary" method="POST" action="/auth/register">
+                                            <div class="form-group">
+                                                <input type="email" class="form-control" id="input_email"
+                                                    placeholder="Your email" name="email" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="password" class="form-control" id="input_password"
+                                                    placeholder="Password" name="password" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="password" class="form-control" id="confirm_input_password"
+                                                    placeholder="Confirm Password" name="confirmPassword" required>
+                                            </div>
+                                            <button type="submit"
+                                                class="btn btn-block btn-lg bg-white mt-4">Register</button>
+
+                                            {{#if message}}
+                                            <div class="alert alert-inverse alert-dismissible fade show mt-2"
+                                                role="alert">
+                                                <span class="alert-inner--icon text-info"><i
+                                                        class="fas fa-info"></i></span>
+                                                <span class="alert-inner--text"><strong>Info!
+                                                    </strong>{{message}}</span>
+                                                <button type="button" class="close" data-dismiss="alert"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            {{/if}}
+
+                                            <button type="button"
+                                                class="btn btn-sm btn-outline-secondary btn-icon col-12 mt-4">
+                                                <span class="btn-inner--text text-white"
+                                                    onclick="window.location.href='/'">Sign In</span>
+                                                <span class="btn-inner--icon text-white"><i
+                                                        class="fas fa-user"></i></span>
+                                            </button>
+                                        </form>
+                                    </div>
+                                    <div class="text-secondary heading h5" style="text-align: center;">
+                                        <a href="/contact.hbs" class="text-white">Contact Us</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="pt-2 pb-3 footer footer-dark bg-tertiary">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <span class="">
+                    &copy; 2020 <a href="https://webpixels.io/" class="footer-link" target="_blank">Warnise.com</a>. All
+                    rights
+                    reserved.
+                </span>
+                <ul class="nav ml-lg-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="https://instagram.com/webpixelsofficial" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://facebook.com/webpixels" target="_blank"><i
+                                class="fab fa-facebook"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/webpixels" target="_blank"><i
+                                class="fab fa-github"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://dribbble.com/webpixels" target="_blank"><i
+                                class="fab fa-dribbble"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- Core -->
+    <script src=" /vendor/jquery/jquery.min.js"></script>
+    <script src=" /vendor/popper/popper.min.js"></script>
+    <script src=" /js/bootstrap/bootstrap.min.js"></script>
+    <!-- FontAwesome 5 -->
+    <script src=" /vendor/fontawesome/js/fontawesome-all.min.js" defer></script>
+    <!-- Page plugins -->
+    <script src=" /vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src=" /vendor/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
+    <script src=" /vendor/input-mask/input-mask.min.js"></script>
+    <script src=" /vendor/nouislider/js/nouislider.min.js"></script>
+    <script src=" /vendor/textarea-autosize/textarea-autosize.min.js"></script>
+    <!-- Theme JS -->
+    <script src=" /js/theme.js"></script>
+</body>
+
+</html>

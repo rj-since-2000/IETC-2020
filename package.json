@@ -1,0 +1,31 @@
+{
+  "name": "IETC-2020",
+  "version": "1.0.0",
+  "description": "<img src=\"https://www.stm-publishing.com/wp-content/uploads/2019/10/IET.png\" width=\"50%\"><img src=\"https://iet-nitk.github.io/assets/img/siglogo/Cipher-logo.png\" width=\"50%\">",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rj-since-2000/IETC-2020.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rj-since-2000/IETC-2020/issues"
+  },
+  "homepage": "https://github.com/rj-since-2000/IETC-2020#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.7"
+  }
+}
