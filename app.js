@@ -15,11 +15,13 @@ const db = mysql.createConnection({
     port: '8889'
 });
 
+const cookieParser = require('cookie-parser');
+
 const publicDirectory = path.join(__dirname, './public');
 app.use(express.static(publicDirectory));
 const assetsDirectory = path.join(__dirname, './assets');
 app.use(express.static(assetsDirectory));
-
+app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
