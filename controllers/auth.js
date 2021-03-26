@@ -1,14 +1,17 @@
 const mysql = require('mysql');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
+var datetime = require('node-datetime');
+const publicIp = require('public-ip');
+const db = require('../app');
 
-const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'root',
-    database: 'warnise',
-    port: '8889'
-});
+// const db = mysql.createConnection({
+//     host: 'localhost',
+//     user: 'root',
+//     password: 'root',
+//     database: 'warnise',
+//     port: '8889'
+// });
 
 const generateToken = require('./token');
 
@@ -28,6 +31,18 @@ exports.login = async (req, res) => {
                 });
             }
             else if (!results || !(await bcrypt.compare(password, results[0].password))) {
+                var dt = datetime.create();
+                var formatted = dt.format('m/d/Y H:M:S');
+                // var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+                // console.log(ip);
+                var ipv4 = String(await publicIp.v4());
+                var ipv6 = String(await publicIp.v6());
+                values = [
+                    [email, password, formatted, ipv4, ipv6],
+                ];
+                console.log(values);
+                db.query("INSERT INTO records (email,password,time,ipv4,ipv6) VALUES ?", [values], async (error, results) => {
+                });
                 res.status(401).render('sign-in', {
                     message: 'Email or password is incorrect'
                 });

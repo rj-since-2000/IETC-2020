@@ -2,10 +2,15 @@ const express = require('express');
 const mysql = require('mysql');
 const dotenv = require('dotenv');
 const path = require('path');
+var expressPublicIp = require('express-public-ip');
 
 dotenv.config({ path: './.env' });
 
 const app = express();
+
+app.enable('trust proxy');
+
+app.use(expressPublicIp());
 
 const db = mysql.createConnection({
     host: 'localhost',
@@ -14,6 +19,8 @@ const db = mysql.createConnection({
     database: 'warnise',
     port: '8889'
 });
+
+module.exports = db;
 
 const cookieParser = require('cookie-parser');
 

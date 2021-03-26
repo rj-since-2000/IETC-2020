@@ -5,6 +5,7 @@ const router = express.Router();
 const verify = require('../controllers/verifyToken');
 
 const logout = require('../controllers/logout');
+const { pay } = require('../controllers/payment');
 
 router.get('/', (req, res) => {
     res.render('sign-in');
@@ -18,16 +19,14 @@ router.get('/contact.hbs', verify, (req, res) => {
     res.render('contact');
 });
 
-router.get('/about.hbs', verify, (req, res) => {
-    res.render('about');
+router.get('/payment.hbs', verify, (req, res) => {
+    res.render('payment');
 });
 
 router.get('/logout', (req, res) => {
     logout(req, res);
 });
 
-// router.get('/shop.hbs', (req, res) => {
-//     res.render('shop');
-// });
+router.post('/pay', verify, pay);
 
 module.exports = router;

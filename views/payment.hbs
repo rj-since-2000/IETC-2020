@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"
+        content="Probably the most complete UI kit out there. Multiple functionalities and controls added,  extended color palette and beautiful typography, designed as its own extended version of Bootstrap at  the highest level of quality.                             ">
+    <meta name="author" content="Webpixels">
+    <title>Warnise payment</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800|Roboto:400,500,700" rel="stylesheet">
+    <!-- Theme CSS -->
+    <link type="text/css" href="/css/theme.css" rel="stylesheet">
+    <!-- Demo CSS - No need to use these in your project -->
+    <link type="text/css" href="/css/demo.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-tertiary py-4">
+        <div class="container">
+            <a class="navbar-brand" href="#"><strong>Warnise</strong></a>
+            <button class="navbar-toggler" type="button" data-action="offcanvas-open" data-target="#navbar_main"
+                aria-controls="navbar_main" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse offcanvas-collapse" id="navbar_main">
+                <ul class="navbar-nav ml-auto align-items-lg-center">
+                    <h6 class="dropdown-header font-weight-600 d-lg-none px-0">Menu</h6>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbar_main_dropdown_1" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Overview</a>
+                        <div class="dropdown-menu" aria-labelledby="navbar_1_dropdown_1">
+                            <a class="dropdown-item" href="/payment.hbs">Place your order</a>
+                            <a class="dropdown-item" href="/contact.hbs">Contact</a>
+                        </div>
+                    </li>
+                    <div class="dropdown-divider d-lg-none my-4"></div>
+                    <h6 class="dropdown-header font-weight-600 d-lg-none px-0">Social Media</h6>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-icon" href="https://instagram.com/likeadiamondintheskyi/"
+                            target="_blank"><i class="fab fa-instagram"></i><span
+                                class="ml-2 d-lg-none">Instagram</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-icon" href="https://web.facebook.com/webpixels" target="_blank"><i
+                                class="fab fa-facebook"></i><span class="ml-2 d-lg-none">Facebook</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-icon" href="https://dribbble.com/webpixels" target="_blank"><i
+                                class="fab fa-dribbble"></i><span class="ml-2 d-lg-none">Dribbble</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-icon" href="https://github.com/rj-since-2000" target="_blank"><i
+                                class="fab fa-github"></i><span class="ml-2 d-lg-none">Github</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/logout"><button type="button" class="btn btn-sm btn-outline-muted btn-icon">
+                                <span class="btn-inner--text text-dark">logout</span>
+                            </button></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="main">
+        <section class="slice slice-lg">
+            <div class="container">
+                <div class="mb-5 text-center">
+                    <h3 class="heading h2">Thankyou for shopping with us!</h3>
+                    <div class="fluid-paragraph text-center">
+                        <p class="lead mb-0">Please complete the payment to place your order</p>
+                    </div>
+                </div>
+                <div class="card-deck mb-3">
+                    <div class="card card-pricing popular text-center px-3 mb-4 z-depth-3">
+                        <div class="card-header py-4">
+                            <h4 class="mb-4">Order amount</h4>
+                            <h1 id="amount" class="display-4 text-primary text-center"></h1>
+                            <span class="h6 text-muted">including 18% gst</span>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled mb-4">
+                                <li>Up to 15 users</li>
+                                <li>Premium email support</li>
+                                <li>Weekly updates</li>
+                                <li>Free cancelation</li>
+                            </ul>
+
+                            <button onclick="pay()" type="submit" class="btn btn-primary mb-3">Make payment</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="pt-2 pb-3 footer  footer-dark bg-tertiary">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <span class="">
+                    &copy; 2020 <a href="https://webpixels.io/" class="footer-link" target="_blank">Warnise.com</a>. All
+                    rights
+                    reserved.
+                </span>
+                <ul class="nav ml-lg-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="https://instagram.com/webpixelsofficial" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://facebook.com/webpixels" target="_blank"><i
+                                class="fab fa-facebook"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/webpixels" target="_blank"><i
+                                class="fab fa-github"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://dribbble.com/webpixels" target="_blank"><i
+                                class="fab fa-dribbble"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- Core -->
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/popper/popper.min.js"></script>
+    <script src="/js/bootstrap/bootstrap.min.js"></script>
+    <!-- FontAwesome 5 -->
+    <script src="/vendor/fontawesome/js/fontawesome-all.min.js" defer></script>
+    <!-- Page plugins -->
+    <script src="/vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="/vendor/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
+    <script src="/vendor/input-mask/input-mask.min.js"></script>
+    <script src="/vendor/nouislider/js/nouislider.min.js"></script>
+    <script src="/vendor/textarea-autosize/textarea-autosize.min.js"></script>
+    <!-- Theme JS -->
+    <script src="/js/theme.js"></script>
+    <script src="/js/payment.js"></script>
+</body>
+
+</html>

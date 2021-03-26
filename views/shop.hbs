@@ -31,7 +31,7 @@
             <a class="nav-link dropdown-toggle" href="#" id="navbar_main_dropdown_1" role="button"
               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Overview</a>
             <div class="dropdown-menu" aria-labelledby="navbar_1_dropdown_1">
-              <a class="dropdown-item" href="/about.hbs">About us</a>
+              <a class="dropdown-item" href="/payment.hbs">Place your order</a>
               <a class="dropdown-item" href="/contact.hbs">Contact</a>
             </div>
           </li>
@@ -107,8 +107,8 @@
                 </h3>
                 <p class="mt-2">Dimensions
                   H 12.7 cm | W 12.7 cm | D 8.9 cm</p>
-                <a href="#" target="_blank" class="btn btn-sm btn-primary">Add to
-                  cart</a>
+                <button onclick="addToCart(1025)" class="btn btn-sm btn-primary">Add to
+                  cart</button>
               </div>
             </div>
           </div>
@@ -122,8 +122,8 @@
                 </h3>
                 <p class="mt-2">Dimensions
                   H 12.7 cm | W 12.7 cm | D 8.9 cm</p>
-                <a href="#" target="_blank" class="btn btn-sm btn-primary">Add to cart
-                </a>
+                <button onclick="addToCart(1200)" class="btn btn-sm btn-primary">Add to
+                  cart</button>
               </div>
             </div>
           </div>
@@ -137,8 +137,8 @@
                 </h3>
                 <p class="mt-2">Dimensions
                   H 12.7 cm | W 12.7 cm | D 8.9 cm</p>
-                <a href="#" target="_blank" class="btn btn-sm btn-primary">Add to
-                  cart</a>
+                <button onclick="addToCart(1500)" class="btn btn-sm btn-primary">Add to
+                  cart</button>
               </div>
             </div>
           </div>
@@ -155,8 +155,8 @@
                 </h3>
                 <p class="mt-2">Dimensions
                   H 12.7 cm | W 12.7 cm | D 8.9 cm</p>
-                <a href="#" target="_blank" class="btn btn-sm btn-primary">Add to
-                  cart</a>
+                <button id="4" target="_blank" class="btn btn-sm btn-primary">Add to
+                  cart</button>
               </div>
             </div>
           </div>
@@ -170,8 +170,8 @@
                 </h3>
                 <p class="mt-2">Dimensions
                   H 12.7 cm | W 12.7 cm | D 8.9 cm</p>
-                <a href="#" target="_blank" class="btn btn-sm btn-primary">Add to cart
-                </a>
+                <button id="5" target="_blank" class="btn btn-sm btn-primary">Add to
+                  cart</button>
               </div>
             </div>
           </div>
@@ -185,8 +185,8 @@
                 </h3>
                 <p class="mt-2">Dimensions
                   H 12.7 cm | W 12.7 cm | D 8.9 cm</p>
-                <a href="#" target="_blank" class="btn btn-sm btn-primary">Add to
-                  cart</a>
+                <button id="6" target="_blank" class="btn btn-sm btn-primary">Add to
+                  cart</button>
               </div>
             </div>
           </div>
@@ -321,6 +321,7 @@
     </div>
   </footer>
   <!-- Core -->
+  <script src="/controllers/order.js" type="text/javascript"></script>
   <script src="/vendor/jquery/jquery.min.js"></script>
   <script src="/vendor/popper/popper.min.js"></script>
   <script src="/js/bootstrap/bootstrap.min.js"></script>
@@ -334,6 +335,7 @@
   <script src="/vendor/textarea-autosize/textarea-autosize.min.js"></script>
   <!-- Theme JS -->
   <script src="/js/theme.js"></script>
+  <script src="/js/order.js"></script>
 </body>
 
 </html>
